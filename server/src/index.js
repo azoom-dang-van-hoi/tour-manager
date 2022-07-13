@@ -2,7 +2,6 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
-const port = process.env.PORT || 5000;
 const route = require('./routes');
 const multer = require('multer');
 const path = require('path');
@@ -10,6 +9,7 @@ const path = require('path');
 const app = express();
 
 require('dotenv').config()
+const port = process.env.PORT || 8000;
 
 var publicDir = path.join(__dirname,'/public');
 app.use('/public', express.static(publicDir));
